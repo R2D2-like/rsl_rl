@@ -1,25 +1,20 @@
-# Copyright (c) 2021-2026, ETH Zurich and NVIDIA CORPORATION
+# Copyright (c) 2021-2025, ETH Zurich and NVIDIA CORPORATION
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-"""Building blocks for neural models."""
+"""Definitions for neural-network components for RL-agents."""
 
-from .cnn import CNN
-from .distribution import BetaDistribution, Distribution, GaussianDistribution, HeteroscedasticGaussianDistribution
-from .mlp import MLP
-from .normalization import EmpiricalDiscountedVariationNormalization, EmpiricalNormalization
-from .rnn import RNN, HiddenState
+from .actor_critic import ActorCritic
+from .actor_critic_recurrent import ActorCriticRecurrent
+from .rnd import *
+from .student_teacher import StudentTeacher
+from .student_teacher_recurrent import StudentTeacherRecurrent
+from .symmetry import *
 
 __all__ = [
-    "CNN",
-    "MLP",
-    "RNN",
-    "BetaDistribution",
-    "Distribution",
-    "EmpiricalDiscountedVariationNormalization",
-    "EmpiricalNormalization",
-    "GaussianDistribution",
-    "HeteroscedasticGaussianDistribution",
-    "HiddenState",
+    "ActorCritic",
+    "ActorCriticRecurrent",
+    "StudentTeacher",
+    "StudentTeacherRecurrent",
 ]
